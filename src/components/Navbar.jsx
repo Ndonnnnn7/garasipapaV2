@@ -1,4 +1,3 @@
-// components/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import {
   ShoppingBag,
@@ -21,7 +20,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ["home", "about", "parfume", "clothes"];
+      const sections = ["home", "about", "parfume", "clothes", "footer"];
       // Offset -100px agar deteksi lebih awal saat scroll
       const scrollPosition = window.scrollY + 100;
 
@@ -165,6 +164,9 @@ const Navbar = () => {
                   />
                 </div>
               </div>
+              <NavItem href="#footer" active={activeSection === "footer"}>
+                Contact
+              </NavItem>
             </div>
           </div>
 
@@ -229,9 +231,17 @@ const Navbar = () => {
             />
             <MobileLink
               onClick={() => handleNavClick("parfume")}
-              index="02"
+              index="04"
               label="Fragrance"
               sub="SCENT_CTRL"
+            />
+            
+            {/* --- ADDED: CONTACT MOBILE MENU --- */}
+            <MobileLink
+              onClick={() => handleNavClick("footer")}
+              index="05"
+              label="Contact"
+              sub="SIGNAL_HQ"
             />
           </div>
 

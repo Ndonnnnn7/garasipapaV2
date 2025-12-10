@@ -39,6 +39,11 @@ function App() {
           <section id="clothes">
             <Clothes />
           </section>
+
+          {/* --- SECTION 5: FOOTER --- */}
+          <section id="footer">
+            <Footer />
+          </section>
         </main>
 
         <Footer />
