@@ -101,10 +101,10 @@ const Navbar = () => {
           {/* --- CENTER: NAVIGATION (Desktop) --- */}
           <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <div className="flex items-center gap-1 p-1 rounded-full border border-white/5 bg-white/5 backdrop-blur-md">
-              <NavItem href="#home" active={activeSection === "home"}>
+              <NavItem href="home" active={activeSection === "home"}>
                 Home
               </NavItem>
-              <NavItem href="#about" active={activeSection === "about"}>
+              <NavItem href="about" active={activeSection === "about"}>
                 About
               </NavItem>
 
@@ -152,20 +152,20 @@ const Navbar = () => {
                   </div>
 
                   <DropdownItem
-                    href="#parfume"
+                    href="parfume"
                     label="Fragrance"
                     sub="AIR_FRESHENER"
                     active={activeSection === "parfume"}
                   />
                   <DropdownItem
-                    href="#clothes"
+                    href="clothes"
                     label="Streetwear"
                     sub="APPAREL_V1"
                     active={activeSection === "clothes"}
                   />
                 </div>
               </div>
-              <NavItem href="#footer" active={activeSection === "footer"}>
+              <NavItem href="footer" active={activeSection === "footer"}>
                 Contact
               </NavItem>
             </div>
