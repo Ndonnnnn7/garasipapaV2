@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #121321;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  /* Utility untuk menyembunyikan scrollbar tapi tetap bisa scroll */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Memaksa hide scrollbar secara global tanpa nesting yang rumit */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+  html, body {
+    background-color: #121321; 
+    color: #ffffff;
+    
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+
+  html::-webkit-scrollbar, 
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    scrollbar-width: none;
+  }
