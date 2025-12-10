@@ -6,7 +6,7 @@ import {
   MapPin,
   Globe,
   Zap,
-} from "lucide-react"; // Hapus ArrowUp dari import jika tidak dipakai lagi di sini
+} from "lucide-react"; 
 
 const Footer = () => {
   const [time, setTime] = useState(new Date());
@@ -58,7 +58,7 @@ const Footer = () => {
                 // SITEMAP
               </span>
               <ul className="space-y-3 font-['Space_Grotesk'] text-lg font-bold">
-                {["HOME", "PARTS", "CLOTHES", "ABOUT"].map((item) => (
+                {["HOME", "ABOUT", "PARFUME", "CLOTHES"].map((item) => (
                   <li key={item}>
                     <a
                       href={`#${item.toLowerCase()}`}
