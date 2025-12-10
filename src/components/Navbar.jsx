@@ -1,13 +1,6 @@
 // components/Navbar.jsx
 import React, { useState, useEffect } from "react";
-import {
-  ShoppingBag,
-  ChevronDown,
-  Menu,
-  X,
-  MapPin,
-  Activity,
-} from "lucide-react";
+import { ShoppingBag, ChevronDown, Menu, X, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -44,11 +37,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // FUNGSI SCROLL UTAMA
+  // Kita menghapus parameter '#' dan langsung mencari ID element
   const handleNavClick = (id) => {
     setMobileMenuOpen(false);
+    setActiveDropdown(null); // Tutup dropdown setelah klik
+
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      // Opsional: Hapus focus agar tidak ada outline biru
+      element.focus();
     }
   };
 
@@ -76,22 +75,18 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <Link
               to="/"
-              onClick={() => window.scrollTo(0, 0)}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-3 group"
             >
-              {/* Logo Symbol */}
               <div className="relative w-9 h-9 bg-white text-black flex items-center justify-center rounded overflow-hidden group-hover:scale-95 transition-transform duration-300">
                 <span className="font-['Anton'] text-sm tracking-tighter relative z-10">
                   GP
                 </span>
               </div>
-
-              {/* Logo Text */}
               <div className="flex flex-col">
                 <span className="font-['Anton'] text-white tracking-wide text-xl leading-none group-hover:text-gray-300 transition-colors">
                   GARASIPAPA
                 </span>
-                <div className="flex items-center gap-2 mt-0.5"></div>
               </div>
             </Link>
 
@@ -101,10 +96,17 @@ const Navbar = () => {
           {/* --- CENTER: NAVIGATION (Desktop) --- */}
           <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <div className="flex items-center gap-1 p-1 rounded-full border border-white/5 bg-white/5 backdrop-blur-md">
-              <NavItem href="home" active={activeSection === "home"}>
+              {/* UBAH DARI href MENJADI onClick */}
+              <NavItem
+                onClick={() => handleNavClick("home")}
+                active={activeSection === "home"}
+              >
                 Home
               </NavItem>
-              <NavItem href="about" active={activeSection === "about"}>
+              <NavItem
+                onClick={() => handleNavClick("about")}
+                active={activeSection === "about"}
+              >
                 About
               </NavItem>
 
@@ -151,21 +153,27 @@ const Navbar = () => {
                     <Activity size={10} />
                   </div>
 
+                  {/* UBAH DARI href MENJADI onClick */}
                   <DropdownItem
-                    href="parfume"
+                    onClick={() => handleNavClick("parfume")}
                     label="Fragrance"
                     sub="AIR_FRESHENER"
                     active={activeSection === "parfume"}
                   />
                   <DropdownItem
-                    href="clothes"
+                    onClick={() => handleNavClick("clothes")}
                     label="Streetwear"
                     sub="APPAREL_V1"
                     active={activeSection === "clothes"}
                   />
                 </div>
               </div>
-              <NavItem href="footer" active={activeSection === "footer"}>
+
+              {/* UBAH DARI href MENJADI onClick */}
+              <NavItem
+                onClick={() => handleNavClick("footer")}
+                active={activeSection === "footer"}
+              >
                 Contact
               </NavItem>
             </div>
@@ -184,14 +192,13 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {/* --- MOBILE MENU (Brutalist Style) --- */}
+      {/* --- MOBILE MENU --- */}
       <div
         className={`fixed inset-0 z-[60] bg-[#050505] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="flex flex-col h-full p-6 relative overflow-hidden">
-          {/* Background Noise Mobile */}
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
           <div className="flex justify-between items-center mb-12 border-b border-white/10 pb-6 relative z-10">
@@ -212,6 +219,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex flex-col gap-2 relative z-10">
+            {/* UBAH SEMUA MENGGUNAKAN ID (STRING) BUKAN LINK */}
             <MobileLink
               onClick={() => handleNavClick("home")}
               index="01"
@@ -236,8 +244,6 @@ const Navbar = () => {
               label="Fragrance"
               sub="SCENT_CTRL"
             />
-            
-            {/* --- ADDED: CONTACT MOBILE MENU --- */}
             <MobileLink
               onClick={() => handleNavClick("footer")}
               index="05"
@@ -262,11 +268,12 @@ const Navbar = () => {
   );
 };
 
-// --- SUB COMPONENTS ---
+// --- SUB COMPONENTS UPDATE (PENTING!) ---
+// Kita ubah elemen <a> menjadi <button> agar tidak memicu perubahan URL
 
-const NavItem = ({ href, children, active }) => (
-  <a
-    href={href}
+const NavItem = ({ onClick, children, active }) => (
+  <button
+    onClick={onClick}
     className={`
       px-6 py-2 text-xs font-bold font-mono uppercase tracking-wider transition-all duration-300 rounded-full
       ${
@@ -277,14 +284,14 @@ const NavItem = ({ href, children, active }) => (
     `}
   >
     {children}
-  </a>
+  </button>
 );
 
-const DropdownItem = ({ href, label, sub, active }) => (
-  <a
-    href={href}
+const DropdownItem = ({ onClick, label, sub, active }) => (
+  <button
+    onClick={onClick}
     className={`
-         group flex items-center justify-between px-4 py-3 mx-2 rounded-lg transition-all duration-300
+         group w-full flex items-center justify-between px-4 py-3 mx-2 rounded-lg transition-all duration-300 text-left
          ${active ? "bg-white/10" : "hover:bg-white/5"}
       `}
   >
@@ -305,7 +312,7 @@ const DropdownItem = ({ href, label, sub, active }) => (
         active ? "bg-red-500" : "bg-white/10 group-hover:bg-white"
       } transition-colors`}
     ></div>
-  </a>
+  </button>
 );
 
 const MobileLink = ({ onClick, index, label, sub }) => (
