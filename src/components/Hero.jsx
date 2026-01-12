@@ -69,7 +69,7 @@ const Hero = () => {
           {/* Image 1: Fashion Detail */}
           <div className="relative group overflow-hidden border border-white/10 bg-[#111]">
             <img
-              src="public/img/Mobil2.jpeg"
+              src="/img/Mobil2.jpeg"
               alt="Fashion"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out"
             />
@@ -84,7 +84,7 @@ const Hero = () => {
             {/* Offset vertical buat kesan asimetris */}
             <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors"></div>
             <img
-              src="public/img/Mobil1.jpeg"
+              src="/img/Mobil1.jpeg"
               alt="Automotive"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out"
             />
@@ -101,7 +101,7 @@ const Hero = () => {
           {/* Image 3: Lifestyle/Context */}
           <div className="relative group overflow-hidden border border-white/10 bg-[#111]">
             <img
-              src="public/img/Mobil3.jpeg"
+              src="/img/Mobil3.jpeg"
               alt="Lifestyle"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out"
             />

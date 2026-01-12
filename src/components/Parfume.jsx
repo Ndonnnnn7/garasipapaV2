@@ -15,7 +15,7 @@ const SCENTS = [
     color: "from-blue-500 to-cyan-400",
     accent: "text-cyan-400",
     bgAccent: "bg-cyan-500",
-    image: "public/img/Parfum.jpeg",
+    image: "/img/Parfum.jpeg",
     tokopediaLink: "https://vt.tokopedia.com/t/ZSHoJLqx9Njms-Hn4Wy/", 
   },
   {
@@ -30,7 +30,7 @@ const SCENTS = [
     color: "from-amber-600 to-orange-400",
     accent: "text-amber-500",
     bgAccent: "bg-amber-500",
-    image: "public/img/Parfum2.jpeg",
+    image: "/img/Parfum2.jpeg",
     tokopediaLink: "https://vt.tokopedia.com/t/ZSHoJLqx9Njms-Hn4Wy/",
   },
   {
@@ -45,7 +45,7 @@ const SCENTS = [
     color: "from-pink-500 to-white",
     accent: "text-pink-300",
     bgAccent: "bg-pink-300",
-    image: "public/img/Parfum3.jpeg",
+    image: "/img/Parfum3.jpeg",
     tokopediaLink: "https://vt.tokopedia.com/t/ZSHoJLqx9Njms-Hn4Wy/",
   },
   {
@@ -60,7 +60,7 @@ const SCENTS = [
     color: "from-amber-600 to-orange-400",
     accent: "text-amber-500",
     bgAccent: "bg-amber-500",
-    image: "public/img/Parfum4.jpeg",
+    image: "/img/Parfum4.jpeg",
     tokopediaLink: "https://vt.tokopedia.com/t/ZSHoJLqx9Njms-Hn4Wy/",
   },
 ];
