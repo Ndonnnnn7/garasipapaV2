@@ -32,22 +32,23 @@ body {
   scrollbar-width: none;
 }
 
-  html, body {
-    background-color: #121321; 
-    color: #ffffff;
-    
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-  }
+html,
+body {
+  background-color: #121321;
+  color: #ffffff;
 
-  html::-webkit-scrollbar, 
-  body::-webkit-scrollbar {
-    display: none;
-  }
-  
-  *::-webkit-scrollbar {
-    display: none;
-  }
-  * {
-    scrollbar-width: none;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}

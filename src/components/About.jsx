@@ -50,12 +50,11 @@ const About = () => {
           <div className="flex flex-col md:flex-row justify-end mt-12 gap-12">
             <div className="md:w-1/3">
               <p className="font-['Space_Grotesk'] text-xl md:text-2xl leading-relaxed text-gray-300">
-                Kami tidak membangun bengkel. Kami membangun{" "}
+                Garasipapa is our{" "}
                 <span className="text-white border-b border-red-600">
-                  kultur
+                  Business
                 </span>
-                . Titik temu antara oli mesin, aspal panas, dan estetika
-                jalanan.
+                . We sell any products, like t-shirt and hanging parfume.
               </p>
             </div>
           </div>
@@ -68,16 +67,15 @@ const About = () => {
         <div className="p-8 md:p-16 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between">
           <div>
             <span className="font-mono text-red-500 text-sm mb-4 block animate-pulse">
-              ● THE MANIFESTO
+              ● THE GARAGE
             </span>
             <h2 className="font-['Anton'] text-6xl md:text-8xl mb-8 uppercase">
-              Raw Power. <br />
-              Fine Threads.
+              We collaborate with{" "}
+              <span className="text-orange-500">Aoozoom.</span>
             </h2>
             <p className="font-['Space_Grotesk'] text-gray-400 max-w-md text-lg">
-              Mobil adalah ekstensi jiwa, dan pakaian adalah pernyataan sikap.
-              Di GarasiPapa, kami menghapus batas antara <i>automotive parts</i>{" "}
-              dan <i>streetwear</i>.
+              Aoozoom is a lighting brand that offers high-wattage lamps and
+              produces bright illumination.
             </p>
           </div>
 
@@ -85,17 +83,17 @@ const About = () => {
             <div className="flex items-center gap-4 text-gray-500 group cursor-pointer hover:text-white transition-colors">
               <span>01</span>
               <span className="h-[1px] w-8 bg-gray-700 group-hover:bg-white transition-all"></span>
-              <span>PERFORMANCE PARTS</span>
+              <span>HEADLAMP</span>
             </div>
             <div className="flex items-center gap-4 text-gray-500 group cursor-pointer hover:text-white transition-colors">
               <span>02</span>
               <span className="h-[1px] w-8 bg-gray-700 group-hover:bg-white transition-all"></span>
-              <span>LIMITED APPAREL</span>
+              <span>FOGLAMP</span>
             </div>
             <div className="flex items-center gap-4 text-gray-500 group cursor-pointer hover:text-white transition-colors">
               <span>03</span>
               <span className="h-[1px] w-8 bg-gray-700 group-hover:bg-white transition-all"></span>
-              <span>COMMUNITY EVENTS</span>
+              <span>BILED</span>
             </div>
           </div>
         </div>
@@ -112,8 +110,8 @@ const About = () => {
             <div className="border border-white/20 bg-black/50 backdrop-blur-md p-6 max-w-sm">
               <Zap className="text-yellow-500 mb-2 w-6 h-6" />
               <p className="font-['Space_Grotesk'] text-sm italic text-gray-300">
-                "We only sell what we ride. If it's not good enough for our
-                cars, it's not good enough for yours."
+                "Over 50 countries & regions, especially in Russia, Southeast
+                Asia, Central Asia, India and other countries & regions"
               </p>
             </div>
           </div>

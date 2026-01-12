@@ -36,12 +36,12 @@ const Hero = () => {
           {/* Big Typography */}
           <div className="relative">
             <h1 className="text-[14vw] lg:text-[9rem] leading-[0.85] font-black tracking-tighter uppercase mix-blend-difference">
-              Garage
+              Fashion &
               <span
                 className="block text-transparent bg-clip-text bg-gradient-to-b from-white/10 to-transparent"
                 style={{ WebkitTextStroke: "2px white" }}
               >
-                Culture.
+                Accecories.
               </span>
             </h1>
           </div>
@@ -49,13 +49,12 @@ const Hero = () => {
           {/* Description & CTA (Posisi di kanan atas untuk desktop) */}
           <div className="lg:max-w-xs flex flex-col gap-8 pt-4">
             <p className="text-gray-400 text-sm leading-relaxed uppercase tracking-widest font-mono">
-              [EST. 2024] <br />
-              Menyatukan estetika streetwear dengan kultur otomotif. Tanpa
-              kompromi. Hitam di atas putih.
+              [EST. 2020] <br />
+              Simple is the key.
             </p>
 
             <a
-              href="#catalog"
+              href="https://www.instagram.com/garasipapaa?igsh=MWhyOXAyaW1wZHZsOQ=="
               className="group flex items-center justify-between px-6 py-4 bg-white text-black font-bold hover:bg-gray-200 transition-all duration-300 w-full border border-transparent hover:border-white"
             >
               <span>EXPLORE CATALOG</span>
@@ -70,7 +69,7 @@ const Hero = () => {
           {/* Image 1: Fashion Detail */}
           <div className="relative group overflow-hidden border border-white/10 bg-[#111]">
             <img
-              src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&q=80&w=800"
+              src="src/img/Mobil2.jpeg"
               alt="Fashion"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out"
             />
@@ -85,7 +84,7 @@ const Hero = () => {
             {/* Offset vertical buat kesan asimetris */}
             <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-transparent transition-colors"></div>
             <img
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800"
+              src="src/img/Mobil1.jpeg"
               alt="Automotive"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out"
             />
@@ -102,7 +101,7 @@ const Hero = () => {
           {/* Image 3: Lifestyle/Context */}
           <div className="relative group overflow-hidden border border-white/10 bg-[#111]">
             <img
-              src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800"
+              src="src/img/Mobil3.jpeg"
               alt="Lifestyle"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out"
             />
